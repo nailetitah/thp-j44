@@ -1,0 +1,2 @@
+<li class="email-index"><%= link_to email.title, email_path(email.id), remote: true %> | <%= link_to "Supprimer", email_path(email.id), remote: true, :data => {:confirm => "Vous êtes sûr ?", :method => "delete"}, :class => "text-dark delete-email" %>
+</li>

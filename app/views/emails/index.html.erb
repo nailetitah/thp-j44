@@ -1,0 +1,21 @@
+<div class="container">
+<h1>Emails#index</h1>
+		<%= render 'form' %>
+	<div class="row">
+		<div class="col-4">
+			<ul id="email-list">
+				<% @emails.each do |email| %>
+					<li class="email-index"><%= link_to email.title, email_path(email.id), remote: true %> | <%= link_to "Supprimer", email_path(email.id), remote: true, :data => {:confirm => "Vous êtes sûr ?", :method => "delete"}, :class => "text-dark delete-email" %></li>
+				<% end %>
+			</ul>
+		</div>
+		<div id ="email-view" class="col-6 text-center">
+			<h4><%= @last_email.title %></h4>
+			<p class="text-muted"><%= @last_email.author %></p>
+			<p><%= @last_email.content %></p>
+		</div>
+	</div>
+</div>
+
+
+
