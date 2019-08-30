@@ -1,24 +1,6 @@
-# README
+# AJAX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Niveaux 1 à 3 : ok
+Niveau 4 : inachevé 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+PS : j'arrive à 11h pour les corrections !

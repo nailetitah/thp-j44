@@ -1,14 +1,21 @@
-<div class="form">
+<div class="text-center my-3">
+	<div class="form">
 	<%= form_tag(emails_path, method: :post, class: "form", remote: true) do %>
+	<div class="d-none">
 		<label for="title">Title
-			<%= text_field_tag :title %>
+			<%= text_field_tag :title, Faker::Book.title %>
+		</label>
+
 
 		<label for="author">Author
-			<%= text_field_tag :author %>
+			<%= text_field_tag :author, Faker::Internet.email %>
+			</label>
 
 		<label for="content">Content
-			<%= text_field_tag :content %>
-
-		<%= submit_tag 'create', :name => 'commit' %>
+			<%= text_field_tag :content, Faker::Lorem.paragraphs %>
+			</label>
+	</div>
+		<%= submit_tag 'create', :name => 'commit', :class => "w-100" %>
 	<%end%>
+</div>
 </div>

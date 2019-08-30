@@ -24,6 +24,19 @@ class EmailsController < ApplicationController
 
   end
 
+   def edit
+    @email = Email.find(params[:id])
+  end
+
+  def update
+   @email = Email.find(params[:id])
+
+    respond_to do |format|
+      format.html { redirect_to emails_path }
+      format.js { }
+    end
+ end
+
   def destroy
     @email = Email.find(params[:id])
     @email.destroy

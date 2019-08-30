@@ -1,1 +1,7 @@
-document.getElementById("email-view").innerHTML = "<%= j render 'email_show', email: @email %>"
+<% if @email.read = true %>
+isRead.innerHTML  = "Lu"
+<% else %>
+isRead.innerHTML  = "Non-lu"
+<% end %>
+el = document.getElementById("email-view")
+el.innerHTML = "<%= j render 'email_show', email: @email %>"
